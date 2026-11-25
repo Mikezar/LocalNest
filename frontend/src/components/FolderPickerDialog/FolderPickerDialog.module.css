@@ -1,0 +1,153 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgb(15 27 45 / 45%);
+}
+
+.dialog {
+  width: min(560px, 100%);
+  max-height: min(640px, 100%);
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 48px rgb(16 24 40 / 25%);
+  overflow: hidden;
+}
+
+.title {
+  margin: 0;
+  padding: 20px 24px 8px;
+  font-size: 20px;
+}
+
+.crumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 0 20px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.crumbItem {
+  display: inline-flex;
+  align-items: center;
+}
+
+.crumb,
+.current {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.crumb {
+  border: 0;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.crumb:hover {
+  background: var(--bg);
+}
+
+.current {
+  font-weight: 600;
+}
+
+.separator {
+  color: var(--muted);
+}
+
+.list {
+  flex: 1;
+  min-height: 240px;
+  overflow: auto;
+  padding: 8px 12px;
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  text-align: left;
+  font-size: 15px;
+}
+
+.entry:hover {
+  background: var(--primary-light);
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 12px;
+  color: var(--text-secondary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+}
+
+.selection {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-secondary);
+}
+
+.primary,
+.secondary {
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.primary {
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.primary:disabled {
+  opacity: 0.5;
+}
+
+.secondary {
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dialog:focus {
+  outline: none;
+}

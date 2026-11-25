@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px;
+  padding: 12px 14px;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.icon {
+  flex: none;
+}
+
+.message {
+  flex: 1;
+}
+
+.retry {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: #991b1b;
+  font-weight: 500;
+}

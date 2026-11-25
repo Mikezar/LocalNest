@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 
+from localnest.config import Settings
+from localnest.documents import router as documents_router
+from localnest.schemas import HealthResponse
+
 from . import __version__
-from .config import Settings
-from .schemas import HealthResponse
 
 settings = Settings()
 
@@ -17,3 +19,6 @@ def read_health() -> HealthResponse:
         version=__version__,
         environment=settings.environment,
     )
+
+
+app.include_router(documents_router.router)

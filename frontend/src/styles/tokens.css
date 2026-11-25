@@ -1,0 +1,25 @@
+:root {
+  --sidebar-bg: #0f1b2d;
+  --sidebar-fg: #e6ebf2;
+  --sidebar-muted: #8b97a8;
+  --primary: #0f766e;
+  --primary-hover: #0d6560;
+  --primary-light: #ccf0ec;
+  --indigo: #4f46e5;
+  --folder: #f2b84b;
+  --pdf: #dc2626;
+  --md: #6d4aff;
+  --txt: #6b7280;
+  --docx: #2563eb;
+  --bg: #f3f5f7;
+  --card: #ffffff;
+  --border: #e3e7eb;
+  --text: #111827;
+  --text-secondary: #4b5563;
+  --muted: #9aa3ad;
+  --success: #22c55e;
+  --danger: #dc2626;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgb(16 24 40 / 6%);
+}

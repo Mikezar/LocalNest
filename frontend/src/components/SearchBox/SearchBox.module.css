@@ -1,0 +1,60 @@
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px 8px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.field:focus-within {
+  border-color: var(--primary);
+}
+
+.icon {
+  flex: none;
+  color: var(--muted);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 0;
+  border: 0;
+  background: transparent;
+  outline: none;
+}
+
+/* Use our own clear button instead of the browser's. */
+.input::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.clear {
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.count {
+  flex: none;
+  color: var(--text-secondary);
+  font-size: 13px;
+}

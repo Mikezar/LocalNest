@@ -1,0 +1,43 @@
+.card {
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  background: rgb(255 255 255 / 4%);
+  display: grid;
+  gap: 4px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--sidebar-fg);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--sidebar-muted);
+}
+
+.dot[data-state='connected'] {
+  background: var(--success);
+}
+
+.dot[data-state='unreachable'] {
+  background: var(--danger);
+}
+
+.backend {
+  color: var(--sidebar-muted);
+  font-size: 13px;
+  padding-left: 20px;
+}
+
+.version {
+  color: var(--sidebar-muted);
+  font-size: 12px;
+  text-align: right;
+}
