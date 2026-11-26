@@ -11,6 +11,8 @@ requires-python = ">=3.15"
 dependencies = [
     "fastapi[standard]",
     "pydantic-settings",
+    "sqlalchemy",
+    "alembic"
 ]
 
 [project.optional-dependencies]
