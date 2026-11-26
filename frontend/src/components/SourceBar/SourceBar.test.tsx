@@ -63,3 +63,11 @@ describe('SourceBar recent folders', () => {
     expect(onBrowse).toHaveBeenCalled()
   })
 })
+
+describe('SourceBar layout', () => {
+  it('has no view switcher; the tree is the only view', () => {
+    render(<Harness />)
+    expect(screen.queryByRole('group', { name: 'View' })).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /view$/ })).not.toBeInTheDocument()
+  })
+})

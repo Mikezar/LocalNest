@@ -1,14 +1,4 @@
-import {
-  ChevronDown,
-  Folder,
-  FolderSearch,
-  LayoutGrid,
-  List,
-  LoaderCircle,
-  Network,
-  Play,
-  RefreshCw,
-} from 'lucide-react'
+import { ChevronDown, Folder, FolderSearch, LoaderCircle, Play, RefreshCw } from 'lucide-react'
 import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from 'react'
 
 import styles from './SourceBar.module.css'
@@ -145,23 +135,6 @@ export function SourceBar({
           <RefreshCw size={18} aria-hidden="true" />
           Refresh
         </button>
-
-        <div className={styles.views} role="group" aria-label="View">
-          <button type="button" aria-label="List view" aria-disabled="true" title="Coming soon">
-            <List size={18} aria-hidden="true" />
-          </button>
-          <button
-            type="button"
-            aria-label="Tree view"
-            aria-pressed="true"
-            className={styles.activeView}
-          >
-            <Network size={18} aria-hidden="true" />
-          </button>
-          <button type="button" aria-label="Grid view" aria-disabled="true" title="Coming soon">
-            <LayoutGrid size={18} aria-hidden="true" />
-          </button>
-        </div>
       </div>
     </form>
   )
