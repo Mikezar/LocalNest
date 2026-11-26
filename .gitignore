@@ -26,3 +26,5 @@ htmlcov/
 
 # Local application data
 data/
+docs/superpowers/
+frontend/*.md
