@@ -1,7 +1,9 @@
+import uuid
 from datetime import datetime
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
+from localnest.db.models import JobStatus
 from localnest.documents.models import DocumentFile, Folder, Node, NodeKind
 
 
@@ -12,6 +14,11 @@ class FileSystem(BaseModel):
     size_bytes: int | None = None
     modified_at: datetime
     children: list[FileSystem] | None = None
+
+
+class ScanDirectoryResponse(BaseModel):
+    job_id: uuid.UUID = Field(..., description="The ID of the created scan job")
+    status: JobStatus = Field(..., description="The status of the created scan job")
 
 
 def to_file_system_dto(nodes: tuple[Node, ...]) -> list[FileSystem]:

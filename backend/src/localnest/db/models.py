@@ -31,6 +31,11 @@ class DocumentTaskStatus(StrEnum):
     SKIPPED = auto()
 
 
+class JobKind(StrEnum):
+    SCAN = auto()
+    INDEX = auto()
+
+
 def utc_now() -> datetime:
     return datetime.now(UTC)
 
@@ -69,6 +74,15 @@ class Job(Base):
             JobStatus,
             create_constraint=True,
             name="job_status",
+            values_callable=lambda enum_class: [member.value for member in enum_class],
+        ),
+        nullable=False,
+    )
+    kind: Mapped[JobKind] = mapped_column(
+        Enum(
+            JobKind,
+            create_constraint=True,
+            name="job_kind",
             values_callable=lambda enum_class: [member.value for member in enum_class],
         ),
         nullable=False,
